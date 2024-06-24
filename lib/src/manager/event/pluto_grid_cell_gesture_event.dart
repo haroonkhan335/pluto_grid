@@ -123,24 +123,7 @@ class PlutoGridCellGestureEvent extends PlutoGridEvent {
   void _selecting(PlutoGridStateManager stateManager) {
     bool callOnSelected = stateManager.mode.isMultiSelectMode;
 
-    if (stateManager.keyPressed.shift) {
-      final int? columnIdx = stateManager.columnIndex(column);
-
-      stateManager.setCurrentSelectingPosition(
-        cellPosition: PlutoGridCellPosition(
-          columnIdx: columnIdx,
-          rowIdx: rowIdx,
-        ),
-      );
-    } else if (stateManager.keyPressed.ctrl) {
-      stateManager.toggleSelectingRow(rowIdx);
-    } else {
-      callOnSelected = false;
-    }
-
-    if (callOnSelected) {
-      stateManager.handleOnSelected();
-    }
+    callOnSelected = false;
   }
 
   void _selectMode(PlutoGridStateManager stateManager) {

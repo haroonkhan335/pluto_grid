@@ -87,8 +87,6 @@ class PlutoGridActionMoveCellFocus extends PlutoGridShortcutAction {
       stateManager.setCurrentCell(stateManager.firstCell, 0);
       return;
     }
-
-    stateManager.moveCurrentCell(direction, force: force);
   }
 }
 
@@ -106,8 +104,6 @@ class PlutoGridActionMoveSelectedCellFocus extends PlutoGridShortcutAction {
     required PlutoGridStateManager stateManager,
   }) {
     if (stateManager.isEditing == true) return;
-
-    stateManager.moveSelectingCell(direction);
   }
 }
 
@@ -166,8 +162,6 @@ class PlutoGridActionMoveCellFocusByPage extends PlutoGridShortcutAction {
 
         rowIdx += direction.isUp ? -moveCount : moveCount;
 
-        stateManager.moveCurrentCellByRowIdx(rowIdx, direction);
-
         break;
     }
   }
@@ -220,8 +214,6 @@ class PlutoGridActionMoveSelectedCellFocusByPage
         0;
 
     rowIdx += direction.isUp ? -moveCount : moveCount;
-
-    stateManager.moveSelectingCellByRowIdx(rowIdx, direction);
   }
 }
 
@@ -261,17 +253,13 @@ class PlutoGridActionDefaultTab extends PlutoGridShortcutAction {
     if (_willMoveToPreviousRow(
         stateManager.currentCellPosition, stateManager)) {
       _moveCellToPreviousRow(stateManager);
-    } else {
-      stateManager.moveCurrentCell(PlutoMoveDirection.left, force: true);
-    }
+    } else {}
   }
 
   void _moveCellNext(PlutoGridStateManager stateManager) {
     if (_willMoveToNextRow(stateManager.currentCellPosition, stateManager)) {
       _moveCellToNextRow(stateManager);
-    } else {
-      stateManager.moveCurrentCell(PlutoMoveDirection.right, force: true);
-    }
+    } else {}
   }
 
   bool _willMoveToPreviousRow(
@@ -301,31 +289,9 @@ class PlutoGridActionDefaultTab extends PlutoGridShortcutAction {
         position.columnIdx == stateManager.refColumns.length - 1;
   }
 
-  void _moveCellToPreviousRow(PlutoGridStateManager stateManager) {
-    stateManager.moveCurrentCell(
-      PlutoMoveDirection.up,
-      force: true,
-      notify: false,
-    );
+  void _moveCellToPreviousRow(PlutoGridStateManager stateManager) {}
 
-    stateManager.moveCurrentCellToEdgeOfColumns(
-      PlutoMoveDirection.right,
-      force: true,
-    );
-  }
-
-  void _moveCellToNextRow(PlutoGridStateManager stateManager) {
-    stateManager.moveCurrentCell(
-      PlutoMoveDirection.down,
-      force: true,
-      notify: false,
-    );
-
-    stateManager.moveCurrentCellToEdgeOfColumns(
-      PlutoMoveDirection.left,
-      force: true,
-    );
-  }
+  void _moveCellToNextRow(PlutoGridStateManager stateManager) {}
 }
 
 /// {@template pluto_grid_action_default_enter_key}
@@ -407,33 +373,7 @@ class PlutoGridActionDefaultEnterKey extends PlutoGridShortcutAction {
       return;
     }
 
-    if (enterKeyAction.isEditingAndMoveDown) {
-      if (HardwareKeyboard.instance.isShiftPressed) {
-        stateManager.moveCurrentCell(
-          PlutoMoveDirection.up,
-          notify: false,
-        );
-      } else {
-        stateManager.moveCurrentCell(
-          PlutoMoveDirection.down,
-          notify: false,
-        );
-      }
-    } else if (enterKeyAction.isEditingAndMoveRight) {
-      if (HardwareKeyboard.instance.isShiftPressed) {
-        stateManager.moveCurrentCell(
-          PlutoMoveDirection.left,
-          force: true,
-          notify: false,
-        );
-      } else {
-        stateManager.moveCurrentCell(
-          PlutoMoveDirection.right,
-          force: true,
-          notify: false,
-        );
-      }
-    }
+    if (enterKeyAction.isEditingAndMoveDown) {}
   }
 }
 
@@ -481,18 +421,7 @@ class PlutoGridActionMoveCellFocusToEdge extends PlutoGridShortcutAction {
   void execute({
     required PlutoKeyManagerEvent keyEvent,
     required PlutoGridStateManager stateManager,
-  }) {
-    switch (direction) {
-      case PlutoMoveDirection.left:
-      case PlutoMoveDirection.right:
-        stateManager.moveCurrentCellToEdgeOfColumns(direction);
-        break;
-      case PlutoMoveDirection.up:
-      case PlutoMoveDirection.down:
-        stateManager.moveCurrentCellToEdgeOfRows(direction);
-        break;
-    }
-  }
+  }) {}
 }
 
 /// {@template pluto_grid_action_move_selected_cell_focus_to_edge}
@@ -509,18 +438,7 @@ class PlutoGridActionMoveSelectedCellFocusToEdge
   void execute({
     required PlutoKeyManagerEvent keyEvent,
     required PlutoGridStateManager stateManager,
-  }) {
-    switch (direction) {
-      case PlutoMoveDirection.left:
-      case PlutoMoveDirection.right:
-        stateManager.moveSelectingCellToEdgeOfColumns(direction);
-        break;
-      case PlutoMoveDirection.up:
-      case PlutoMoveDirection.down:
-        stateManager.moveSelectingCellToEdgeOfRows(direction);
-        break;
-    }
-  }
+  }) {}
 }
 
 /// {@template pluto_grid_action_set_editing}

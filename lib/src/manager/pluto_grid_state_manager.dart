@@ -14,7 +14,6 @@ import 'state/dragging_row_state.dart';
 import 'state/editing_state.dart';
 import 'state/filtering_row_state.dart';
 import 'state/grid_state.dart';
-import 'state/keyboard_state.dart';
 import 'state/layout_state.dart';
 import 'state/pagination_row_state.dart';
 import 'state/row_group_state.dart';
@@ -34,7 +33,6 @@ abstract class IPlutoGridState
         IEditingState,
         IFilteringRowState,
         IGridState,
-        IKeyboardState,
         ILayoutState,
         IPaginationRowState,
         IRowGroupState,
@@ -53,7 +51,6 @@ class PlutoGridStateChangeNotifier extends PlutoChangeNotifier
         EditingState,
         FilteringRowState,
         GridState,
-        KeyboardState,
         LayoutState,
         PaginationRowState,
         RowGroupState,

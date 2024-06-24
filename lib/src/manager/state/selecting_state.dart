@@ -398,9 +398,7 @@ mixin SelectingState implements IPlutoGridState {
 
   @override
   bool isSelectingInteraction() {
-    return !selectingMode.isNone &&
-        (keyPressed.shift || keyPressed.ctrl) &&
-        currentCell != null;
+    return !selectingMode.isNone && currentCell != null;
   }
 
   @override
@@ -532,8 +530,6 @@ mixin SelectingState implements IPlutoGridState {
     changeCellValue(cell, value, notify: false);
 
     if (configuration.enableMoveDownAfterSelecting) {
-      moveCurrentCell(PlutoMoveDirection.down, notify: false);
-
       setEditing(true, notify: false);
     }
 
