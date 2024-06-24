@@ -4,8 +4,6 @@ import 'package:pluto_grid/pluto_grid.dart';
 abstract class IGridState {
   GlobalKey get gridKey;
 
-  PlutoGridKeyManager? get keyManager;
-
   PlutoGridEventManager? get eventManager;
 
   PlutoGridConfiguration get configuration;
@@ -52,8 +50,6 @@ abstract class IGridState {
   /// [PlutoGridSetColumnFilterEvent]
   bool get filterOnlyEvent;
 
-  void setKeyManager(PlutoGridKeyManager keyManager);
-
   void setEventManager(PlutoGridEventManager eventManager);
 
   void setConfiguration(
@@ -79,8 +75,6 @@ abstract class IGridState {
 }
 
 class _State {
-  PlutoGridKeyManager? _keyManager;
-
   PlutoGridEventManager? _eventManager;
 
   PlutoGridConfiguration? _configuration;
@@ -94,9 +88,6 @@ class _State {
 
 mixin GridState implements IPlutoGridState {
   final _State _state = _State();
-
-  @override
-  PlutoGridKeyManager? get keyManager => _state._keyManager;
 
   @override
   PlutoGridEventManager? get eventManager => _state._eventManager;
@@ -118,11 +109,6 @@ mixin GridState implements IPlutoGridState {
 
   @override
   bool get filterOnlyEvent => _state._filterOnlyEvent;
-
-  @override
-  void setKeyManager(PlutoGridKeyManager? keyManager) {
-    _state._keyManager = keyManager;
-  }
 
   @override
   void setEventManager(PlutoGridEventManager? eventManager) {

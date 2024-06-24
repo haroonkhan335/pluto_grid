@@ -61,8 +61,6 @@ mixin PopupCellState<T extends PopupCell> on State<T>
     textController = TextEditingController()
       ..text =
           widget.column.formattedValueForDisplayInEditing(widget.cell.value);
-
-    textFocus = FocusNode(onKeyEvent: _handleKeyboardFocusOnKey);
   }
 
   @override
@@ -172,35 +170,6 @@ mixin PopupCellState<T extends PopupCell> on State<T>
     if (!widget.stateManager.configuration.enableMoveDownAfterSelecting) {
       textFocus.requestFocus();
     }
-  }
-
-  KeyEventResult _handleKeyboardFocusOnKey(FocusNode node, KeyEvent event) {
-    var keyManager = PlutoKeyManagerEvent(
-      focusNode: node,
-      event: event,
-    );
-
-    if (keyManager.isKeyUpEvent) {
-      return KeyEventResult.handled;
-    }
-
-    if (keyManager.isF2 || keyManager.isCharacter) {
-      if (isOpenedPopup != true) {
-        openPopup();
-        return KeyEventResult.handled;
-      }
-    }
-
-    // 엔터키는 그리드 포커스 핸들러로 전파 한다.
-    if (keyManager.isEnter) {
-      return KeyEventResult.ignored;
-    }
-
-    // KeyManager 로 이벤트 처리를 위임 한다.
-    widget.stateManager.keyManager!.subject.add(keyManager);
-
-    // 모든 이벤트를 처리 하고 이벤트 전파를 중단한다.
-    return KeyEventResult.handled;
   }
 
   @override

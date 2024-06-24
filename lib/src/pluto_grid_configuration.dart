@@ -57,7 +57,6 @@ class PlutoGridConfiguration {
   ///   }
   /// }
   /// ```
-  final PlutoGridShortcut shortcut;
 
   /// Set borders of [PlutoGrid] and columns, cells, and rows.
   final PlutoGridStyleConfig style;
@@ -78,7 +77,6 @@ class PlutoGridConfiguration {
     this.enableMoveHorizontalInEditing = false,
     this.enterKeyAction = PlutoGridEnterKeyAction.editingAndMoveDown,
     this.tabKeyAction = PlutoGridTabKeyAction.normal,
-    this.shortcut = const PlutoGridShortcut(),
     this.style = const PlutoGridStyleConfig(),
     this.scrollbar = const PlutoGridScrollbarConfig(),
     this.columnFilter = const PlutoGridColumnFilterConfig(),
@@ -91,7 +89,6 @@ class PlutoGridConfiguration {
     this.enableMoveHorizontalInEditing = false,
     this.enterKeyAction = PlutoGridEnterKeyAction.editingAndMoveDown,
     this.tabKeyAction = PlutoGridTabKeyAction.normal,
-    this.shortcut = const PlutoGridShortcut(),
     this.style = const PlutoGridStyleConfig.dark(),
     this.scrollbar = const PlutoGridScrollbarConfig(),
     this.columnFilter = const PlutoGridColumnFilterConfig(),
@@ -133,7 +130,6 @@ class PlutoGridConfiguration {
     bool? enableMoveHorizontalInEditing,
     PlutoGridEnterKeyAction? enterKeyAction,
     PlutoGridTabKeyAction? tabKeyAction,
-    PlutoGridShortcut? shortcut,
     PlutoGridStyleConfig? style,
     PlutoGridScrollbarConfig? scrollbar,
     PlutoGridColumnFilterConfig? columnFilter,
@@ -147,7 +143,6 @@ class PlutoGridConfiguration {
           enableMoveHorizontalInEditing ?? this.enableMoveHorizontalInEditing,
       enterKeyAction: enterKeyAction ?? this.enterKeyAction,
       tabKeyAction: tabKeyAction ?? this.tabKeyAction,
-      shortcut: shortcut ?? this.shortcut,
       style: style ?? this.style,
       scrollbar: scrollbar ?? this.scrollbar,
       columnFilter: columnFilter ?? this.columnFilter,
@@ -167,7 +162,6 @@ class PlutoGridConfiguration {
                 other.enableMoveHorizontalInEditing &&
             enterKeyAction == other.enterKeyAction &&
             tabKeyAction == other.tabKeyAction &&
-            shortcut == other.shortcut &&
             style == other.style &&
             scrollbar == other.scrollbar &&
             columnFilter == other.columnFilter &&
@@ -181,7 +175,6 @@ class PlutoGridConfiguration {
         enableMoveHorizontalInEditing,
         enterKeyAction,
         tabKeyAction,
-        shortcut,
         style,
         scrollbar,
         columnFilter,

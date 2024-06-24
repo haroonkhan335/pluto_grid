@@ -83,8 +83,6 @@ class PlutoColumnFilterState extends PlutoStateWithChange<PlutoColumnFilter> {
   initState() {
     super.initState();
 
-    _focusNode = FocusNode(onKeyEvent: _handleOnKey);
-
     widget.column.setFilterFocusNode(_focusNode);
 
     _controller = TextEditingController(text: _filterValue);
@@ -125,65 +123,6 @@ class PlutoColumnFilterState extends PlutoStateWithChange<PlutoColumnFilter> {
       _enabled,
       widget.column.enableFilterMenuItem && !_hasCompositeFilter,
     );
-  }
-
-  void _moveDown({required bool focusToPreviousCell}) {
-    if (!focusToPreviousCell || stateManager.currentCell == null) {
-      stateManager.setCurrentCell(
-        stateManager.refRows.first.cells[widget.column.field],
-        0,
-        notify: false,
-      );
-
-      stateManager.scrollByDirection(PlutoMoveDirection.down, 0);
-    }
-
-    stateManager.notifyListeners();
-  }
-
-  KeyEventResult _handleOnKey(FocusNode node, KeyEvent event) {
-    var keyManager = PlutoKeyManagerEvent(
-      focusNode: node,
-      event: event,
-    );
-
-    if (keyManager.isKeyUpEvent) {
-      return KeyEventResult.handled;
-    }
-
-    final handleMoveDown =
-        (keyManager.isDown || keyManager.isEnter || keyManager.isEsc) &&
-            stateManager.refRows.isNotEmpty;
-
-    final handleMoveHorizontal = keyManager.isTab ||
-        (_controller.text.isEmpty && keyManager.isHorizontal);
-
-    final skip = !(handleMoveDown || handleMoveHorizontal || keyManager.isF3);
-
-    if (skip) {
-      if (keyManager.isUp) {
-        return KeyEventResult.handled;
-      }
-
-      return stateManager.keyManager!.eventResult.skip(
-        KeyEventResult.ignored,
-      );
-    }
-
-    if (handleMoveDown) {
-      _moveDown(focusToPreviousCell: keyManager.isEsc);
-    } else if (handleMoveHorizontal) {
-    } else if (keyManager.isF3) {
-      stateManager.showFilterPopup(
-        _focusNode.context!,
-        calledColumn: widget.column,
-        onClosed: () {
-          _focusNode.requestFocus();
-        },
-      );
-    }
-
-    return KeyEventResult.handled;
   }
 
   void _handleFocusFromRows(PlutoGridEvent plutoEvent) {

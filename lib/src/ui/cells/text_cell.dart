@@ -1,8 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pluto_grid/pluto_grid.dart';
-import 'package:pluto_grid/src/helper/platform_helper.dart';
 
 abstract class TextCell extends StatefulWidget {
   final PlutoGridStateManager stateManager;
@@ -51,8 +49,6 @@ mixin TextCellState<T extends TextCell> on State<T> implements TextFieldProps {
   @override
   void initState() {
     super.initState();
-
-    cellFocus = FocusNode(onKeyEvent: _handleOnKey);
 
     widget.stateManager.setTextEditingController(_textController);
 
@@ -165,62 +161,7 @@ mixin TextCellState<T extends TextCell> on State<T> implements TextFieldProps {
     _changeValue();
 
     _handleOnChanged(old);
-
-    PlatformHelper.onMobile(() {
-      FocusScope.of(context).requestFocus(FocusNode());
-    });
   }
-
-  KeyEventResult _handleOnKey(FocusNode node, KeyEvent event) {
-    var keyManager = PlutoKeyManagerEvent(
-      focusNode: node,
-      event: event,
-    );
-
-    if (keyManager.isKeyUpEvent) {
-      return KeyEventResult.handled;
-    }
-
-    final skip = !(keyManager.isVertical ||
-        _moveHorizontal(keyManager) ||
-        keyManager.isEsc ||
-        keyManager.isTab ||
-        keyManager.isF3 ||
-        keyManager.isEnter);
-
-    // 이동 및 엔터키, 수정불가 셀의 좌우 이동을 제외한 문자열 입력 등의 키 입력은 텍스트 필드로 전파 한다.
-    if (skip) {
-      return widget.stateManager.keyManager!.eventResult.skip(
-        KeyEventResult.ignored,
-      );
-    }
-
-    if (_debounce.isDebounced(
-      hashCode: _textController.text.hashCode,
-      ignore: !kIsWeb,
-    )) {
-      return KeyEventResult.handled;
-    }
-
-    // 엔터키는 그리드 포커스 핸들러로 전파 한다.
-    if (keyManager.isEnter) {
-      _handleOnComplete();
-      return KeyEventResult.ignored;
-    }
-
-    // ESC 는 편집된 문자열을 원래 문자열로 돌이킨다.
-    if (keyManager.isEsc) {
-      _restoreText();
-    }
-
-    // KeyManager 로 이벤트 처리를 위임 한다.
-    widget.stateManager.keyManager!.subject.add(keyManager);
-
-    // 모든 이벤트를 처리 하고 이벤트 전파를 중단한다.
-    return KeyEventResult.handled;
-  }
-
-  void _handleOnTap() {}
 
   @override
   Widget build(BuildContext context) {
@@ -231,7 +172,6 @@ mixin TextCellState<T extends TextCell> on State<T> implements TextFieldProps {
       onChanged: _handleOnChanged,
       onEditingComplete: _handleOnComplete,
       onSubmitted: (_) => _handleOnComplete(),
-      onTap: _handleOnTap,
       style: widget.stateManager.configuration.style.cellTextStyle,
       decoration: const InputDecoration(
         border: OutlineInputBorder(
