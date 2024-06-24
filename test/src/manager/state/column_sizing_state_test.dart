@@ -10,7 +10,6 @@ void main() {
       final stateManager = PlutoGridStateManager(
         columns: [],
         rows: [],
-        gridFocusNode: MockFocusNode(),
         scroll: MockPlutoGridScrollController(),
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(
@@ -33,7 +32,6 @@ void main() {
       final stateManager = PlutoGridStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: MockFocusNode(),
         scroll: MockPlutoGridScrollController(),
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(
@@ -56,7 +54,6 @@ void main() {
       final stateManager = PlutoGridStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: MockFocusNode(),
         scroll: MockPlutoGridScrollController(),
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(
@@ -79,7 +76,6 @@ void main() {
       final stateManager = PlutoGridStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: MockFocusNode(),
         scroll: MockPlutoGridScrollController(),
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(
@@ -104,7 +100,6 @@ void main() {
       final stateManager = PlutoGridStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: MockFocusNode(),
         scroll: MockPlutoGridScrollController(),
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(
@@ -128,7 +123,6 @@ void main() {
       final stateManager = PlutoGridStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: MockFocusNode(),
         scroll: MockPlutoGridScrollController(),
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(
@@ -152,7 +146,6 @@ void main() {
       final stateManager = PlutoGridStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: MockFocusNode(),
         scroll: MockPlutoGridScrollController(),
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(

@@ -90,10 +90,7 @@ class _PlutoDefaultCellState extends PlutoStateWithChange<PlutoDefaultCell> {
 
   @override
   void updateState(PlutoNotifierEvent event) {
-    _hasFocus = update<bool>(
-      _hasFocus,
-      stateManager.hasFocus,
-    );
+    _hasFocus = update<bool>(_hasFocus, false);
 
     _canRowDrag = update<bool>(
       _canRowDrag,

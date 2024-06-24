@@ -12,7 +12,6 @@ void main() {
   PlutoGridStateManager createStateManager({
     required List<PlutoColumn> columns,
     required List<PlutoRow> rows,
-    FocusNode? gridFocusNode,
     PlutoGridScrollController? scroll,
     BoxConstraints? layout,
     PlutoGridConfiguration configuration = const PlutoGridConfiguration(),
@@ -20,7 +19,6 @@ void main() {
     final stateManager = PlutoGridStateManager(
       columns: columns,
       rows: rows,
-      gridFocusNode: gridFocusNode ?? MockFocusNode(),
       scroll: scroll ?? MockPlutoGridScrollController(),
       configuration: configuration,
     );
@@ -49,7 +47,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
         );
@@ -81,7 +78,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
         );
@@ -135,7 +131,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
       );
@@ -177,7 +172,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
       );
@@ -229,7 +223,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
       );
@@ -262,7 +255,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
       );
@@ -310,7 +302,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 500, maxWidth: 600),
       );
@@ -371,7 +362,7 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
+
         scroll: null,
         // 최소 넓이(고정 컬럼 2개 + PlutoDefaultSettings.bodyMinWidth) 부족
         layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
@@ -422,7 +413,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
       );
@@ -461,7 +451,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: [],
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -490,7 +479,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: [],
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -520,7 +508,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: [],
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -552,7 +539,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -586,7 +572,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -622,7 +607,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -661,7 +645,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -695,7 +678,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
       );
@@ -722,7 +704,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
       );
@@ -753,7 +734,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
       );
@@ -785,7 +765,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
       );
@@ -818,7 +797,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
       );
@@ -850,7 +828,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -894,7 +871,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -927,7 +903,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -954,7 +929,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -982,7 +956,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -1011,7 +984,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -1040,7 +1012,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -1070,7 +1041,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
         );
@@ -1102,7 +1072,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
       );
@@ -1141,7 +1110,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
       );
@@ -1200,7 +1168,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 500, maxWidth: 400),
       );
@@ -1261,7 +1228,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: FocusNode(),
           scroll: null,
           configuration: const PlutoGridConfiguration(
             enableMoveDownAfterSelecting: false,
@@ -1312,7 +1278,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: FocusNode(),
           scroll: PlutoGridScrollController(
             vertical: vertical,
             horizontal: MockLinkedScrollControllerGroup(),

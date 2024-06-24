@@ -537,8 +537,6 @@ mixin SelectingState implements IPlutoGridState {
       setEditing(true, notify: false);
     }
 
-    setKeepFocus(true, notify: false);
-
     notifyListeners(true, handleAfterSelectingRow.hashCode);
   }
 

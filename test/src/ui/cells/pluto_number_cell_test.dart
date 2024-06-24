@@ -31,8 +31,6 @@ void main() {
 
         when(stateManager.isEditing).thenReturn(true);
 
-        when(stateManager.keepFocus).thenReturn(true);
-
         when(stateManager.keyManager).thenReturn(PlutoGridKeyManager(
           stateManager: stateManager,
         ));

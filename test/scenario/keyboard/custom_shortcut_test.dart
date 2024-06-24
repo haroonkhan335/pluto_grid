@@ -51,8 +51,6 @@ void main() {
       ),
     );
 
-    stateManager.gridFocusNode.requestFocus();
-
     await tester.pump();
   }
 

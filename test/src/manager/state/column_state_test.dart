@@ -30,7 +30,6 @@ void main() {
   PlutoGridStateManager getStateManager({
     required List<PlutoColumn> columns,
     required List<PlutoRow> rows,
-    required FocusNode? gridFocusNode,
     required PlutoGridScrollController scroll,
     List<PlutoColumnGroup>? columnGroups,
     PlutoGridConfiguration configuration = const PlutoGridConfiguration(),
@@ -39,7 +38,6 @@ void main() {
       columns: columns,
       rows: rows,
       columnGroups: columnGroups,
-      gridFocusNode: MockFocusNode(),
       scroll: scroll,
       configuration: configuration,
     )..setEventManager(eventManager);
@@ -55,7 +53,6 @@ void main() {
         PlutoColumn(title: '', field: '', type: PlutoColumnType.text()),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -87,7 +84,6 @@ void main() {
         ),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -124,7 +120,6 @@ void main() {
         ),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -155,7 +150,6 @@ void main() {
         ),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -188,7 +182,6 @@ void main() {
         ),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -227,7 +220,6 @@ void main() {
         ),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -258,7 +250,6 @@ void main() {
         ),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -290,7 +281,6 @@ void main() {
         ),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -337,7 +327,6 @@ void main() {
         ),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -360,7 +349,6 @@ void main() {
             count: 3, frozen: PlutoColumnFrozen.end),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -388,7 +376,6 @@ void main() {
             count: 3, frozen: PlutoColumnFrozen.end),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -414,7 +401,6 @@ void main() {
             count: 3, frozen: PlutoColumnFrozen.end),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -437,7 +423,6 @@ void main() {
             count: 3, frozen: PlutoColumnFrozen.end),
       ],
       rows: [],
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -464,7 +449,6 @@ void main() {
     PlutoGridStateManager stateManager = getStateManager(
       columns: columns,
       rows: rows,
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -500,7 +484,6 @@ void main() {
     PlutoGridStateManager stateManager = getStateManager(
       columns: columns,
       rows: rows,
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -528,7 +511,6 @@ void main() {
     PlutoGridStateManager stateManager = getStateManager(
       columns: columns,
       rows: rows,
-      gridFocusNode: null,
       scroll: scroll,
     );
 
@@ -552,7 +534,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -566,7 +547,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -588,7 +568,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -614,7 +593,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -649,7 +627,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -694,7 +671,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -733,7 +709,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -779,7 +754,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -824,7 +798,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -868,7 +841,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -895,7 +867,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(
@@ -935,7 +906,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -969,7 +939,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1008,7 +977,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1036,7 +1004,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(
@@ -1072,7 +1039,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1097,7 +1063,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1124,7 +1089,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1162,7 +1126,6 @@ void main() {
           columns: columns,
           columnGroups: columnGroups,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1200,7 +1163,6 @@ void main() {
           columns: columns,
           columnGroups: columnGroups,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1250,7 +1212,6 @@ void main() {
           columns: columns,
           columnGroups: columnGroups,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1292,7 +1253,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1316,7 +1276,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(
@@ -1345,7 +1304,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1373,7 +1331,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1407,7 +1364,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1437,7 +1393,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1467,7 +1422,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1500,7 +1454,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1528,7 +1481,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
         configuration: const PlutoGridConfiguration(
           columnSize: PlutoGridColumnSizeConfig(
@@ -1562,7 +1514,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
           configuration: const PlutoGridConfiguration(
             columnSize: PlutoGridColumnSizeConfig(
@@ -1594,7 +1545,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
           configuration: const PlutoGridConfiguration(
             columnSize: PlutoGridColumnSizeConfig(
@@ -1624,7 +1574,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
           configuration: const PlutoGridConfiguration(
             columnSize: PlutoGridColumnSizeConfig(
@@ -1658,7 +1607,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
             columns: columns,
             rows: [],
-            gridFocusNode: null,
             scroll: scroll,
             configuration: const PlutoGridConfiguration(
               columnSize: PlutoGridColumnSizeConfig(
@@ -1691,7 +1639,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1733,7 +1680,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1775,7 +1721,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1808,7 +1753,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1843,7 +1787,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1875,7 +1818,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1907,7 +1849,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1932,7 +1873,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1951,7 +1891,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1972,7 +1911,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: columns,
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1995,7 +1933,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2027,7 +1964,6 @@ void main() {
         PlutoGridStateManager stateManager = getStateManager(
           columns: columns,
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2070,7 +2006,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: [column],
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -2090,7 +2025,6 @@ void main() {
       PlutoGridStateManager stateManager = getStateManager(
         columns: [column],
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -2112,7 +2046,6 @@ void main() {
           ...ColumnHelper.textColumn('title', count: 3, width: 100),
         ],
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -2147,7 +2080,6 @@ void main() {
           ...ColumnHelper.textColumn('title', count: 3, width: 100),
         ],
         rows: [],
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -2194,7 +2126,6 @@ void main() {
             ...ColumnHelper.textColumn('title', count: 3, width: 100),
           ],
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2246,7 +2177,6 @@ void main() {
             ...ColumnHelper.textColumn('title', count: 3, width: 100),
           ],
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2298,7 +2228,6 @@ void main() {
             ...ColumnHelper.textColumn('title', count: 3, width: 100),
           ],
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2350,7 +2279,6 @@ void main() {
             ...ColumnHelper.textColumn('title', count: 3, width: 100),
           ],
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2397,7 +2325,6 @@ void main() {
             ...ColumnHelper.textColumn('title', count: 3, width: 100),
           ],
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2428,7 +2355,6 @@ void main() {
             ...ColumnHelper.textColumn('title', count: 3, width: 100),
           ],
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2470,7 +2396,6 @@ void main() {
             ...ColumnHelper.textColumn('title', count: 3, width: 100),
           ],
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2513,7 +2438,6 @@ void main() {
             ...ColumnHelper.textColumn('title', count: 3, width: 100),
           ],
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2541,7 +2465,6 @@ void main() {
             ...ColumnHelper.textColumn('title', count: 3, width: 100),
           ],
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -2569,7 +2492,6 @@ void main() {
             ...ColumnHelper.textColumn('title', count: 3, width: 100),
           ],
           rows: [],
-          gridFocusNode: null,
           scroll: scroll,
         );
 

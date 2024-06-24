@@ -167,7 +167,6 @@ mixin TextCellState<T extends TextCell> on State<T> implements TextFieldProps {
     _handleOnChanged(old);
 
     PlatformHelper.onMobile(() {
-      widget.stateManager.setKeepFocus(false);
       FocusScope.of(context).requestFocus(FocusNode());
     });
   }
@@ -221,16 +220,10 @@ mixin TextCellState<T extends TextCell> on State<T> implements TextFieldProps {
     return KeyEventResult.handled;
   }
 
-  void _handleOnTap() {
-    widget.stateManager.setKeepFocus(true);
-  }
+  void _handleOnTap() {}
 
   @override
   Widget build(BuildContext context) {
-    if (widget.stateManager.keepFocus) {
-      cellFocus.requestFocus();
-    }
-
     return TextField(
       focusNode: cellFocus,
       controller: _textController,

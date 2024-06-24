@@ -10,7 +10,6 @@ void main() {
   PlutoGridStateManager createStateManager({
     required List<PlutoColumn> columns,
     required List<PlutoRow> rows,
-    FocusNode? gridFocusNode,
     PlutoGridScrollController? scroll,
     BoxConstraints? layout,
     PlutoGridConfiguration configuration = const PlutoGridConfiguration(),
@@ -18,7 +17,6 @@ void main() {
     final stateManager = PlutoGridStateManager(
       columns: columns,
       rows: rows,
-      gridFocusNode: gridFocusNode ?? MockFocusNode(),
       scroll: scroll ?? MockPlutoGridScrollController(),
       configuration: configuration,
     );
@@ -53,7 +51,6 @@ void main() {
       stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxWidth: 300, maxHeight: 500),
       );

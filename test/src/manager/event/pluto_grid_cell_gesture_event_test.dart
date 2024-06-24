@@ -68,7 +68,6 @@ void main() {
       'isCurrentCell 가 true 인 경우 return 되어야 한다.',
       () {
         // given
-        when(stateManager.hasFocus).thenReturn(false);
         when(stateManager.isCurrentCell(any)).thenReturn(true);
         clearInteractions(stateManager);
 
@@ -96,7 +95,6 @@ void main() {
       'setCurrentCell 이 호출 되어야 한다.',
       () {
         // given
-        when(stateManager.hasFocus).thenReturn(false);
         when(stateManager.isCurrentCell(any)).thenReturn(false);
         when(stateManager.isSelectingInteraction()).thenReturn(false);
         when(stateManager.mode).thenReturn(PlutoGridMode.normal);
@@ -133,7 +131,6 @@ void main() {
       'setEditing(true) 가 호출 되어야 한다.',
       () {
         // given
-        when(stateManager.hasFocus).thenReturn(true);
         when(stateManager.isCurrentCell(any)).thenReturn(true);
         when(stateManager.isSelectingInteraction()).thenReturn(false);
         when(stateManager.mode).thenReturn(PlutoGridMode.normal);
@@ -173,7 +170,6 @@ void main() {
         const columnIdx = 1;
         const rowIdx = 1;
 
-        when(stateManager.hasFocus).thenReturn(true);
         when(stateManager.isSelectingInteraction()).thenReturn(true);
         when(keyPressed.shift).thenReturn(true);
         when(stateManager.columnIndex(column)).thenReturn(columnIdx);
@@ -214,7 +210,6 @@ void main() {
         final cell = PlutoCell(value: 'value');
         const rowIdx = 1;
 
-        when(stateManager.hasFocus).thenReturn(true);
         when(stateManager.isSelectingInteraction()).thenReturn(true);
         when(keyPressed.ctrl).thenReturn(true);
         clearInteractions(stateManager);
@@ -252,7 +247,6 @@ void main() {
         final cell = PlutoCell(value: 'value');
         const rowIdx = 1;
 
-        when(stateManager.hasFocus).thenReturn(true);
         when(stateManager.isSelectingInteraction()).thenReturn(false);
         when(stateManager.mode).thenReturn(PlutoGridMode.select);
         when(stateManager.isCurrentCell(any)).thenReturn(true);
@@ -286,7 +280,6 @@ void main() {
         final cell = PlutoCell(value: 'value');
         const rowIdx = 1;
 
-        when(stateManager.hasFocus).thenReturn(true);
         when(stateManager.isSelectingInteraction()).thenReturn(false);
         when(stateManager.mode).thenReturn(PlutoGridMode.select);
         when(stateManager.isCurrentCell(any)).thenReturn(false);

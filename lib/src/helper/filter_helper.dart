@@ -389,8 +389,6 @@ class FilterPopupState {
     _stateManager!.setSelectingMode(PlutoGridSelectingMode.row, notify: false);
 
     if (_stateManager!.rows.isNotEmpty) {
-      _stateManager!.setKeepFocus(true, notify: false);
-
       _stateManager!.setCurrentCell(
         _stateManager!.rows.first.cells[FilterHelper.filterFieldValue],
         0,
@@ -524,7 +522,6 @@ class PlutoGridFilterPopupHeader extends StatelessWidget {
 
   void handleClearButton() {
     if (stateManager!.rows.isEmpty) {
-      Navigator.of(stateManager!.gridFocusNode.context!).pop();
     } else {
       stateManager!.removeRows(stateManager!.rows);
     }

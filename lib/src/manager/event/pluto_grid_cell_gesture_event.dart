@@ -117,12 +117,6 @@ class PlutoGridCellGestureEvent extends PlutoGridEvent {
   }
 
   bool _setKeepFocusAndCurrentCell(PlutoGridStateManager stateManager) {
-    if (stateManager.hasFocus) {
-      return false;
-    }
-
-    stateManager.setKeepFocus(true);
-
     return stateManager.isCurrentCell(cell);
   }
 

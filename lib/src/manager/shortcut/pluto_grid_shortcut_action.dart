@@ -560,8 +560,6 @@ class PlutoGridActionFocusToColumnFilter extends PlutoGridShortcutAction {
 
     if (currentColumn.filterFocusNode?.canRequestFocus == true) {
       currentColumn.filterFocusNode?.requestFocus();
-
-      stateManager.setKeepFocus(false);
     }
   }
 }

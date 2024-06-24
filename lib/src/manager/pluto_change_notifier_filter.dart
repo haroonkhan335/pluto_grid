@@ -103,7 +103,6 @@ abstract class PlutoChangeNotifierFilterResolver {
       stateManager.setFilter.hashCode: 'setFilter',
 
       /// focus_state
-      stateManager.setKeepFocus.hashCode: 'setKeepFocus',
 
       /// grid_state
       stateManager.resetCurrentState.hashCode: 'resetCurrentState',

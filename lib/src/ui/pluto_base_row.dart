@@ -300,7 +300,7 @@ class _RowContainerWidgetState extends PlutoStateWithChange<_RowContainerWidget>
     final bool hasCurrentSelectingPosition =
         stateManager.hasCurrentSelectingPosition;
 
-    final bool isFocusedCurrentRow = isCurrentRow && stateManager.hasFocus;
+    final bool isFocusedCurrentRow = isCurrentRow;
 
     final Color rowColor = _getRowColor(
       isDragTarget: isDragTarget,

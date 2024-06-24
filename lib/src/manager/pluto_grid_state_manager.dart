@@ -13,7 +13,6 @@ import 'state/column_state.dart';
 import 'state/dragging_row_state.dart';
 import 'state/editing_state.dart';
 import 'state/filtering_row_state.dart';
-import 'state/focus_state.dart';
 import 'state/grid_state.dart';
 import 'state/keyboard_state.dart';
 import 'state/layout_state.dart';
@@ -34,7 +33,6 @@ abstract class IPlutoGridState
         IDraggingRowState,
         IEditingState,
         IFilteringRowState,
-        IFocusState,
         IGridState,
         IKeyboardState,
         ILayoutState,
@@ -54,7 +52,6 @@ class PlutoGridStateChangeNotifier extends PlutoChangeNotifier
         DraggingRowState,
         EditingState,
         FilteringRowState,
-        FocusState,
         GridState,
         KeyboardState,
         LayoutState,
@@ -67,7 +64,6 @@ class PlutoGridStateChangeNotifier extends PlutoChangeNotifier
   PlutoGridStateChangeNotifier({
     required List<PlutoColumn> columns,
     required List<PlutoRow> rows,
-    required this.gridFocusNode,
     required this.scroll,
     List<PlutoColumnGroup>? columnGroups,
     this.onChanged,
@@ -108,9 +104,6 @@ class PlutoGridStateChangeNotifier extends PlutoChangeNotifier
 
   @override
   final FilteredList<PlutoRow> refRows;
-
-  @override
-  final FocusNode gridFocusNode;
 
   @override
   final PlutoGridScrollController scroll;
@@ -211,7 +204,6 @@ class PlutoGridStateManager extends PlutoGridStateChangeNotifier {
   PlutoGridStateManager({
     required super.columns,
     required super.rows,
-    required super.gridFocusNode,
     required super.scroll,
     super.columnGroups,
     super.onChanged,

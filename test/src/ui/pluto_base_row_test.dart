@@ -31,7 +31,6 @@ void main() {
     when(stateManager.hasCurrentSelectingPosition).thenReturn(true);
     when(stateManager.isEditing).thenReturn(true);
     when(stateManager.selectingMode).thenReturn(PlutoGridSelectingMode.cell);
-    when(stateManager.hasFocus).thenReturn(true);
     when(stateManager.canRowDrag).thenReturn(true);
     when(stateManager.showFrozenColumn).thenReturn(false);
     when(stateManager.enabledRowGroups).thenReturn(false);

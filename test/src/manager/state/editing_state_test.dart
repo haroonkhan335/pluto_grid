@@ -12,7 +12,6 @@ void main() {
   PlutoGridStateManager createStateManager({
     required List<PlutoColumn> columns,
     required List<PlutoRow> rows,
-    FocusNode? gridFocusNode,
     PlutoGridScrollController? scroll,
     BoxConstraints? layout,
     PlutoGridConfiguration configuration = const PlutoGridConfiguration(),
@@ -22,7 +21,6 @@ void main() {
     final stateManager = PlutoGridStateManager(
       columns: columns,
       rows: rows,
-      gridFocusNode: gridFocusNode ?? MockFocusNode(),
       scroll: scroll ?? MockPlutoGridScrollController(),
       configuration: configuration,
       mode: mode,
@@ -63,7 +61,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
       );
@@ -124,7 +121,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
       );
@@ -199,7 +195,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
       );
@@ -307,7 +302,6 @@ void main() {
         stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           mode: mode,
           layout: const BoxConstraints(maxHeight: 300, maxWidth: 50),
@@ -436,7 +430,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           mode: PlutoGridMode.select,
           onChangedEventCallback: mock.oneParamReturnVoid,
@@ -476,7 +469,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
           mode: PlutoGridMode.select,
           onChangedEventCallback: mock.oneParamReturnVoid,

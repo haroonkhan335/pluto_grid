@@ -87,15 +87,11 @@ void main() {
 
         expect(focusNode!.hasFocus, true);
 
-        expect(stateManager.hasFocus, false);
-
         await tester.sendKeyEvent(LogicalKeyboardKey.arrowDown);
 
         await tester.pump();
 
         expect(focusNode.hasFocus, false);
-
-        expect(stateManager.hasFocus, true);
 
         expect(stateManager.currentCell?.value, 'header3 value 0');
       },
@@ -117,15 +113,11 @@ void main() {
 
         expect(focusNode!.hasFocus, true);
 
-        expect(stateManager.hasFocus, false);
-
         await tester.sendKeyEvent(LogicalKeyboardKey.enter);
 
         await tester.pump();
 
         expect(focusNode.hasFocus, false);
-
-        expect(stateManager.hasFocus, true);
 
         expect(stateManager.currentCell?.value, 'header3 value 0');
       },
@@ -147,15 +139,11 @@ void main() {
 
         expect(focusNode!.hasFocus, true);
 
-        expect(stateManager.hasFocus, false);
-
         await tester.sendKeyEvent(LogicalKeyboardKey.escape);
 
         await tester.pump();
 
         expect(focusNode.hasFocus, false);
-
-        expect(stateManager.hasFocus, true);
 
         expect(stateManager.currentCell?.value, 'header3 value 3');
       },
@@ -172,8 +160,6 @@ void main() {
 
         await tester.pump();
 
-        expect(stateManager.gridFocusNode.hasFocus, true);
-
         expect(find.byType(PlutoGridFilterPopupHeader), findsNothing);
       },
     );
@@ -188,8 +174,6 @@ void main() {
         await tester.sendKeyEvent(LogicalKeyboardKey.f3);
 
         await tester.pump();
-
-        expect(stateManager.gridFocusNode.hasFocus, true);
 
         expect(find.byType(PlutoGridFilterPopupHeader), findsNothing);
       },

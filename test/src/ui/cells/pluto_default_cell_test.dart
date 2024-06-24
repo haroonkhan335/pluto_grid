@@ -41,7 +41,6 @@ void main() {
     );
     when(stateManager.localeText).thenReturn(const PlutoGridLocaleText());
     when(stateManager.keepFocus).thenReturn(true);
-    when(stateManager.hasFocus).thenReturn(true);
     when(stateManager.canRowDrag).thenReturn(true);
     when(stateManager.rowHeight).thenReturn(0);
     when(stateManager.currentSelectingRows).thenReturn([]);

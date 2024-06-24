@@ -138,10 +138,6 @@ class PlutoColumnFilterState extends PlutoStateWithChange<PlutoColumnFilter> {
       stateManager.scrollByDirection(PlutoMoveDirection.down, 0);
     }
 
-    stateManager.setKeepFocus(true, notify: false);
-
-    stateManager.gridFocusNode.requestFocus();
-
     stateManager.notifyListeners();
   }
 
@@ -177,16 +173,11 @@ class PlutoColumnFilterState extends PlutoStateWithChange<PlutoColumnFilter> {
     if (handleMoveDown) {
       _moveDown(focusToPreviousCell: keyManager.isEsc);
     } else if (handleMoveHorizontal) {
-      stateManager.nextFocusOfColumnFilter(
-        widget.column,
-        reversed: keyManager.isLeft || keyManager.isShiftPressed,
-      );
     } else if (keyManager.isF3) {
       stateManager.showFilterPopup(
         _focusNode.context!,
         calledColumn: widget.column,
         onClosed: () {
-          stateManager.setKeepFocus(true, notify: false);
           _focusNode.requestFocus();
         },
       );
@@ -211,15 +202,12 @@ class PlutoColumnFilterState extends PlutoStateWithChange<PlutoColumnFilter> {
 
       if (isCurrentColumn) {
         stateManager.clearCurrentCell(notify: false);
-        stateManager.setKeepFocus(false);
         _focusNode.requestFocus();
       }
     }
   }
 
-  void _handleOnTap() {
-    stateManager.setKeepFocus(false);
-  }
+  void _handleOnTap() {}
 
   void _handleOnChanged(String changed) {
     stateManager.eventManager!.addEvent(

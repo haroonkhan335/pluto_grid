@@ -25,7 +25,6 @@ void main() {
     );
     when(stateManager.localeText).thenReturn(const PlutoGridLocaleText());
     when(stateManager.keepFocus).thenReturn(true);
-    when(stateManager.hasFocus).thenReturn(true);
   });
 
   BoxDecoration getCellDecoration(Finder cell) {

@@ -380,8 +380,6 @@ class PlutoGridState extends PlutoStateWithChange<PlutoGrid> {
 
   Widget? _footer;
 
-  final FocusNode _gridFocusNode = FocusNode();
-
   final LinkedScrollControllerGroup _verticalScroll =
       LinkedScrollControllerGroup();
 
@@ -413,9 +411,7 @@ class PlutoGridState extends PlutoStateWithChange<PlutoGrid> {
 
     _initHeaderFooter();
 
-    _disposeList.add(() {
-      _gridFocusNode.dispose();
-    });
+    _disposeList.add(() {});
 
     super.initState();
   }
@@ -500,7 +496,6 @@ class PlutoGridState extends PlutoStateWithChange<PlutoGrid> {
     _stateManager = PlutoGridStateManager(
       columns: widget.columns,
       rows: widget.rows,
-      gridFocusNode: _gridFocusNode,
       scroll: PlutoGridScrollController(
         vertical: _verticalScroll,
         horizontal: _horizontalScroll,
@@ -574,8 +569,6 @@ class PlutoGridState extends PlutoStateWithChange<PlutoGrid> {
       if (_stateManager.currentCell == null) {
         _stateManager.setCurrentCell(_stateManager.firstCell, 0);
       }
-
-      _stateManager.gridFocusNode.requestFocus();
     });
   }
 
@@ -607,7 +600,6 @@ class PlutoGridState extends PlutoStateWithChange<PlutoGrid> {
   @override
   Widget build(BuildContext context) {
     return FocusScope(
-      onFocusChange: _stateManager.setKeepFocus,
       onKeyEvent: _handleGridFocusOnKey,
       child: _GridContainer(
         stateManager: _stateManager,
@@ -1213,7 +1205,6 @@ class _GridContainer extends StatelessWidget {
     final borderRadius = style.gridBorderRadius.resolve(TextDirection.ltr);
 
     return Focus(
-      focusNode: stateManager.gridFocusNode,
       child: ScrollConfiguration(
         behavior: PlutoScrollBehavior(
           isMobile: PlatformHelper.isMobile,

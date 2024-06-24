@@ -40,9 +40,8 @@ void main() {
       ),
     );
     when(stateManager.localeText).thenReturn(const PlutoGridLocaleText());
-    when(stateManager.gridFocusNode).thenReturn(FocusNode());
+
     when(stateManager.keepFocus).thenReturn(true);
-    when(stateManager.hasFocus).thenReturn(true);
     when(stateManager.selectingMode).thenReturn(PlutoGridSelectingMode.cell);
     when(stateManager.canRowDrag).thenReturn(true);
     when(stateManager.isSelectedCell(any, any, any)).thenReturn(false);
@@ -544,7 +543,6 @@ void main() {
         when(stateManager.isCurrentCell(any)).thenReturn(isCurrentCell);
         when(stateManager.isEditing).thenReturn(isEditing);
         when(stateManager.isSelectedCell(any, any, any)).thenReturn(false);
-        when(stateManager.hasFocus).thenReturn(true);
 
         cell = PlutoCell(value: 'one');
 
@@ -625,7 +623,6 @@ void main() {
         when(stateManager.isSelectedCell(any, any, any))
             .thenReturn(isSelectedCell);
         when(stateManager.style).thenReturn(configuration.style);
-        when(stateManager.hasFocus).thenReturn(true);
         when(stateManager.isEditing).thenReturn(true);
 
         cell = PlutoCell(value: 'one');

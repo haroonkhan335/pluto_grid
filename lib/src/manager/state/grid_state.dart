@@ -171,8 +171,6 @@ mixin GridState implements IPlutoGridState {
         break;
     }
 
-    setSelectingMode(selectingMode);
-
     resetCurrentState();
   }
 

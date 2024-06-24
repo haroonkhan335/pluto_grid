@@ -155,7 +155,6 @@ mixin PopupCellState<T extends PopupCell> on State<T>
     } else if (event.cell != null) {
       selectedValue = event.cell!.value;
     } else {
-      widget.stateManager.setKeepFocus(true);
       textFocus.requestFocus();
       return;
     }
@@ -206,10 +205,6 @@ mixin PopupCellState<T extends PopupCell> on State<T>
 
   @override
   Widget build(BuildContext context) {
-    if (widget.stateManager.keepFocus) {
-      textFocus.requestFocus();
-    }
-
     return TextField(
       focusNode: textFocus,
       controller: textController,

@@ -19,7 +19,6 @@ void main() {
   PlutoGridStateManager createStateManager({
     required List<PlutoColumn> columns,
     required List<PlutoRow> rows,
-    FocusNode? gridFocusNode,
     PlutoGridScrollController? scroll,
     BoxConstraints? layout,
     PlutoGridConfiguration configuration = const PlutoGridConfiguration(),
@@ -28,7 +27,6 @@ void main() {
     final stateManager = PlutoGridStateManager(
       columns: columns,
       rows: rows,
-      gridFocusNode: gridFocusNode ?? MockFocusNode(),
       scroll: scroll ?? MockPlutoGridScrollController(),
       configuration: configuration,
       createHeader: createHeader,
@@ -56,7 +54,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -80,7 +77,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -110,7 +106,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -134,7 +129,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -164,7 +158,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -188,7 +181,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -212,7 +204,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -238,7 +229,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -262,7 +252,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -290,7 +279,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -317,7 +305,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -351,7 +338,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -378,7 +364,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
         layout: const BoxConstraints(),
       );
@@ -413,7 +398,6 @@ void main() {
         stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
           layout: const BoxConstraints(
             maxWidth: 500,
@@ -490,7 +474,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -515,7 +498,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -540,7 +522,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -565,7 +546,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -592,7 +572,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -621,7 +600,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -661,7 +639,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -709,7 +686,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -749,7 +725,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -791,7 +766,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -852,7 +826,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -886,7 +859,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -915,7 +887,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
       );
 
@@ -942,7 +913,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
       );
 
@@ -968,7 +938,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
         layout: const BoxConstraints(),
       );
@@ -1010,7 +979,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: scroll,
       );
 
@@ -1057,7 +1025,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -1092,7 +1059,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -1130,7 +1096,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
       );
 
@@ -1159,7 +1124,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
       );
 
@@ -1211,7 +1175,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -1243,7 +1206,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
         // when
@@ -1268,7 +1230,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
         // when
@@ -1293,7 +1254,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
       );
 
@@ -1316,7 +1276,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
         layout: const BoxConstraints(),
       );
@@ -1350,7 +1309,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
       );
 
@@ -1373,7 +1331,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
       );
 
@@ -1403,7 +1360,6 @@ void main() {
       PlutoGridStateManager stateManager = createStateManager(
         columns: columns,
         rows: rows,
-        gridFocusNode: null,
         scroll: null,
       );
 
@@ -1433,7 +1389,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
           layout: const BoxConstraints(
             maxWidth: 500,
@@ -1480,7 +1435,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
           layout: const BoxConstraints(
             maxWidth: 500,
@@ -1527,7 +1481,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
           layout: const BoxConstraints(
             maxWidth: 500,
@@ -1574,7 +1527,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
           layout: const BoxConstraints(
             maxWidth: 500,
@@ -1617,7 +1569,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
           layout: const BoxConstraints(
             maxWidth: 500,
@@ -1661,7 +1612,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
           createHeader: (PlutoGridStateManager? stateManager) =>
               const Text('header'),
@@ -1710,7 +1660,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1746,7 +1695,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1782,7 +1730,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: scroll,
         );
 
@@ -1819,7 +1766,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -1849,7 +1795,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 
@@ -1879,7 +1824,6 @@ void main() {
         PlutoGridStateManager stateManager = createStateManager(
           columns: columns,
           rows: rows,
-          gridFocusNode: null,
           scroll: null,
         );
 

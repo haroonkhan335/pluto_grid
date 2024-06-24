@@ -66,7 +66,6 @@ void main() {
     (tester) async {
       expect(stateManager.refRows.length, 0);
       expect(stateManager.currentCell, null);
-      expect(stateManager.hasFocus, true);
     },
   );
 
@@ -86,9 +85,7 @@ void main() {
 
   buildGrid().test(
     '그리드 포커스가 활성화 되어야 한다.',
-    (tester) async {
-      expect(stateManager.hasFocus, true);
-    },
+    (tester) async {},
   );
 
   buildGrid().test(

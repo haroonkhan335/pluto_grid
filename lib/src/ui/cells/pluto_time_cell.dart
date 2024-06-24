@@ -92,7 +92,6 @@ class PlutoTimeCellState extends State<PlutoTimeCell>
         isOpenedPopup = false;
 
         if (event.gridA == null || event.gridB == null) {
-          widget.stateManager.setKeepFocus(true);
           textFocus.requestFocus();
           return;
         }
@@ -208,26 +207,14 @@ class PlutoTimeCellState extends State<PlutoTimeCell>
 
     final isCurrentCell = renderContext.stateManager.isCurrentCell(cell);
 
-    final cellColor = isCurrentCell && renderContext.stateManager.hasFocus
-        ? widget.stateManager.style.activatedBorderColor
-        : widget.stateManager.style.gridBackgroundColor;
+    final cellColor = widget.stateManager.style.gridBackgroundColor;
 
-    final textColor = isCurrentCell && renderContext.stateManager.hasFocus
-        ? widget.stateManager.style.gridBackgroundColor
-        : widget.stateManager.style.cellTextStyle.color;
+    final textColor = widget.stateManager.style.cellTextStyle.color;
 
     return DecoratedBox(
       decoration: BoxDecoration(
         color: cellColor,
         shape: BoxShape.circle,
-        border: !isCurrentCell
-            ? null
-            : !renderContext.stateManager.hasFocus
-                ? Border.all(
-                    color: widget.stateManager.style.activatedBorderColor,
-                    width: 1,
-                  )
-                : null,
       ),
       child: Padding(
         padding: const EdgeInsets.all(5),

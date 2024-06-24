@@ -16,7 +16,6 @@ void main() {
     final stateManager = PlutoGridStateManager(
       columns: columns,
       rows: rows,
-      gridFocusNode: MockFocusNode(),
       scroll: MockPlutoGridScrollController(),
     );
 
