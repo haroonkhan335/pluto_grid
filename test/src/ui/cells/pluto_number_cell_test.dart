@@ -31,10 +31,6 @@ void main() {
 
         when(stateManager.isEditing).thenReturn(true);
 
-        when(stateManager.keyManager).thenReturn(PlutoGridKeyManager(
-          stateManager: stateManager,
-        ));
-
         final PlutoColumn column = PlutoColumn(
           title: 'column title',
           field: 'column_field_name',

@@ -87,48 +87,6 @@ mixin TextCellState<T extends TextCell> on State<T> implements TextFieldProps {
     super.dispose();
   }
 
-  void _restoreText() {
-    if (_cellEditingStatus.isNotChanged) {
-      return;
-    }
-
-    _textController.text = _initialCellValue.toString();
-
-    widget.stateManager.changeCellValue(
-      widget.stateManager.currentCell!,
-      _initialCellValue,
-      notify: false,
-    );
-  }
-
-  bool _moveHorizontal(PlutoKeyManagerEvent keyManager) {
-    if (!keyManager.isHorizontal) {
-      return false;
-    }
-
-    if (widget.column.readOnly == true) {
-      return true;
-    }
-
-    final selection = _textController.selection;
-
-    if (selection.baseOffset != selection.extentOffset) {
-      return false;
-    }
-
-    if (selection.baseOffset == 0 && keyManager.isLeft) {
-      return true;
-    }
-
-    final textLength = _textController.text.length;
-
-    if (selection.baseOffset == textLength && keyManager.isRight) {
-      return true;
-    }
-
-    return false;
-  }
-
   void _changeValue() {
     if (formattedValue == _textController.text) {
       return;
